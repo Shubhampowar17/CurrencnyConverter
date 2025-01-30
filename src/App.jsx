@@ -59,56 +59,30 @@ function App() {
            
          </div>
 
-         <h1 className='text-red-500 font-bold'>TO</h1>
-{/* 
-         <div className='w-96 h-32 bg-sky-200 flex p-4  rounded-2xl'>
+         <h1 className='text-red-500 font-bold'>TO</h1> 
 
-           <label className='text-white'>From</label>
- 
-            <select className='bg-black h-10'>
- 
-             {Object.entries(currencies).map(([code , name])=> 
-             <option key={code} value={code}>
-             {name}
-             </option>)}
+    <div className='w-96 h-40  bg-cover font-medium bg-sky-400 flex flex-col  rounded-2xl justify-around p-4'>
 
-            </select>
+          <div className='flex justify-between'>
 
-      
-            </div> */}
+          <label className='text-white'>From</label>
 
-<div className='w-96 h-40  bg-cover font-medium bg-sky-400 flex flex-col  rounded-2xl justify-around p-4'>
-
-<div className='flex justify-between'>
-
-<label className='text-white'>From</label>
-
-<select className='bg-black  w-28'  onChange={(e)=>setToCurrency(e.target.value)}>
+          <select className='bg-black  w-28'  onChange={(e)=>setToCurrency(e.target.value)}>
              {Object.entries(currencies).map(([code , name])=> 
               <option key={code} value={code}>
                 {name}
               </option>)}
              
 
-</select>
+           </select>
 
-</div>
+           </div>
 
-<input placeholder='' type='tel' className='bg-white w-68 h-10 border-b-black rounded-s-md' value={toValue} disabled></input>
+      <input placeholder='' type='tel' className='bg-white w-68 h-10 border-b-black rounded-s-md' value={toValue} disabled></input>
 
-
-
-</div>
-
-
-            
-
-         
+      </div>
 
     </div>
-     
-     
-     
     </>
   )
 }
